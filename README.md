@@ -1,2 +1,2 @@
-# fseabackend
-creating a faculty skill enhancement programme application
+# fseaBackend
+Faculty Skill Enhancement Activity Tracker Backend

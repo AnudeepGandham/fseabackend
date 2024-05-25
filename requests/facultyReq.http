@@ -1,0 +1,83 @@
+
+// upload faculty sdp data
+POST http://localhost:4000/faculty-api/sdpdata
+Content-Type: application/json
+
+{
+    "sdpId":"{{$timestamp}}",
+    "facultyId":"2071A5673",
+    "title":"Blockchain Technology",
+    "topic":"",
+    "startDate":"",
+    "endDate":"",
+    "organizedBy":"",
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "status":true
+}
+
+
+###
+// upload faculty review data
+
+POST http://localhost:4000/faculty-api/reviewdata
+Content-Type: application/json
+
+{
+    "revId":"{{$timestamp}}",
+    "facultyId":"2071A5673",
+    "title":"Functions",
+    "roles":[],
+    "startDate":"",
+    "endDate":"",
+    "organizedBy":"",
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "status":true
+}
+
+
+###
+// get sdp data
+
+GET http://localhost:4000/faculty-api/sdpdata/2071A5673
+
+###
+// get review data
+
+GET http://localhost:4000/faculty-api/reviewdata/2071A5673
+
+###
+//faculty registering
+post http://localhost:4000/faculty-api/faci
+Content-Type: application/json
+
+{
+    "facultyId":"516",
+    "username":"rajesh",
+    "password":"rajesh",
+    "email":"rajesh@mail.com",
+    "phone":"9534569871"
+
+}
+###
+//faculty login
+post http://localhost:4000/faculty-api/login
+Content-Type: application/json
+
+
+{
+    "facultyId":"516",
+    "username":"rajesh",
+    "password":"rajesh yadav"
+}
+
+###
+post http://localhost:4000/faculty-api/manage_passwords
+Content-Type: application/json
+
+{
+    "username":"rajesh",
+    "password":"rajesh yadav",
+    "newPassword":"rajesh"
+}
